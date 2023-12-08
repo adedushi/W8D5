@@ -14,6 +14,14 @@ function _makeGrid() {
   for(let i = 0; i < 8; i++){
     array.push([])
   }
+
+  array.forEach(subArray => {
+    for (let j = 0; j < 8; j++) {
+      subArray.push([])
+    }
+  })
+
+  return array
 }
 
 /**
@@ -21,6 +29,7 @@ function _makeGrid() {
  */
 function Board () {
   this.grid = _makeGrid();
+  
 }
 
 Board.DIRS = [
